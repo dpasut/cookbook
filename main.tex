@@ -1,0 +1,152 @@
+\documentclass[twoside,letterpaper,11pt]{article}
+\usepackage[contents,nonumber]{cuisine}
+\usepackage[letterpaper,twoside,margin=1.5in,bindingoffset=0.25in,nofoot]{geometry}
+%\usepackage[twoside,bindingoffset=6mm,verbose,marginratio={4:6,5:7},%
+%textwidth=117.3mm,height=179.6mm, nofoot, showframe]{geometry}%
+\usepackage{xpatch}
+\usepackage{nicefrac}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fourier, erewhon, cabin}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage[newlinetospace]{titlesec}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{gensymb}
+
+% Suppress special first character at beginning of page
+\makeatletter
+\xpatchcmd{\Displ@ySt@p}{\arabic{st@pnumber}}{}{}{}
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \csname the#1\endcsname\quad
+  \fi}
+\makeatother
+
+% Set column widths
+% \RecipeWidths{Total recipe width} {Number of servings width} {Step number width} {Ingredient width} {Quantity width} {Units width}
+\RecipeWidths{\textwidth}{5cm}{0cm}{3cm}{0.75cm}{0.75cm}
+\renewcommand*{\recipetitlefont}{\Large\bfseries}
+\renewcommand*{\recipefreeformfont}{\itshape}
+
+% Limit number of items in TOC
+\newcounter{limitperpage}
+\setcounter{limitperpage}{36}
+\newcounter{tocentries}
+\xapptocmd{\addcontentsline}{\ifstrequal{#1}{toc}{%
+    \stepcounter{tocentries}%
+    }{}%
+    \ifnum\value{tocentries} = \value{limitperpage} 
+    \addtocontents{toc}{\protect\clearpage}%
+    \setcounter{tocentries}{0}%
+    \fi
+}{}{}
+
+% Title
+\title{\vspace*{6cm}The Willvin Recipe Book}
+\author{Alex Boivin and Siobhan Williams}
+
+\begin{document}
+\begin{titlepage}
+% Suppress page number on title page
+\clearpage\maketitle
+\thispagestyle{empty}
+\end{titlepage}
+% Make empty page after title page
+\thispagestyle{empty}
+\clearpage
+\begingroup
+  \pagestyle{empty}
+  \null
+  \newpage
+\endgroup
+\pagenumbering{roman} % Roman numerals for TOC
+\tableofcontents
+\clearpage
+\pagenumbering{arabic} % Switch at arabic numbers
+% Set section title formatting
+\titleformat{\section}[block]{\fontsize{72pt}{72pt}\bfseries\sffamily\center}{}{0em}{}[\thispagestyle{empty}\cleardoublepage]
+\titlespacing{\section}{0pt}{150pt}{40pt}
+\phantom{text}
+
+\section{Brunch}
+
+\input{banana_oatmeal_muffins}\newpage
+\input{crispy_home_fries}\newpage
+\input{crispy_potato_hash}\newpage
+
+\vspace{150pt} % Add vertical space before title
+\phantom{text}
+\section{Sides}
+
+\input{ceasar_salad}\newpage
+\input{classic_potato_salad}\newpage
+\input{roast_potatoes}\newpage
+
+\vspace{150pt}
+\phantom{text}
+\section{Soups and Salads}
+
+\input{tempeh_taco_salad}\newpage
+\input{roasted_carrot_and_avocado_salad}\newpage
+\input{carrot_salad_with_tahini}\newpage
+\input{carrot_soup}\newpage
+\input{coconut_red_lentil_soup}\newpage
+\input{green_lentil_soup}\newpage
+\input{black_bean_soup}\newpage
+\input{split_pea_soup}\newpage
+\input{rustic_leek_potato_soup}\newpage
+\input{grilled_cheese_tomato_soup}\newpage
+
+\input{soup_salads_books}
+% Manually add list of books to TOC
+\addcontentsline{toc}{subsection}{Recipes From Books}
+\newpage
+
+
+\vspace{150pt}
+\phantom{text}
+\section{Mains}
+
+\input{samosa-shepherds-pie}\newpage
+\input{southwest_potatoes}\newpage
+\input{stewed_lentils_and_tomatoes}\newpage
+\input{tarka_dal}\newpage
+\input{coconut_red_lentil_curry}\newpage
+\input{chana_masala}\newpage
+\input{broccoli_quinoa}\newpage
+\input{broccoli_buddha_bowl}\newpage
+\input{tlt_sandwich}\newpage
+\input{tempeh_and_hummus_sandwiches}\newpage
+\input{red_curry_peanut_zoodles}\newpage
+\input{three_bean_chili}\newpage
+\input{vegetarian_moussaka}\newpage
+\input{penne_alla_vodka}\newpage
+\input{grandfathers_pasta}\newpage
+\input{lasagna}\newpage
+\input{stuffed_shells}\newpage
+\input{imperial_macarony_bake}\newpage
+\input{cheese_fondue}\newpage
+
+\input{mains_books}
+\addcontentsline{toc}{subsection}{Recipes From Books}
+\newpage
+
+\vspace{150pt}
+\phantom{text}
+\section{Desserts}
+
+\input{vegan_chocolate_chip_cookies}\newpage
+\input{whole_lemon_bars}\newpage
+\input{meyer_lemon_tarts}\newpage
+\input{chocolate_cake}\newpage
+\input{chocolate_beet_cake}\newpage
+\input{mocha-cream_roll}\newpage
+\input{tofu_chocolate_mousse}\newpage
+
+\input{desserts_books}
+\addcontentsline{toc}{subsection}{Recipes From Books}
+\newpage
+
+\end{document}
