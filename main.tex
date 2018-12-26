@@ -78,13 +78,12 @@
 
 \vspace{150pt} % Add vertical space before title
 \phantom{text}
-\section{Sides}
+\section{Sides and Appetizers}
 
 \input{recipes/ceasar_salad}\newpage
 \input{recipes/classic_potato_salad}\newpage
 \input{recipes/roast_potatoes}\newpage
-\input{recipes/onion_jam}\newpage
-\input{recipes/basic_almond_cheese}\newpage
+\input{recipes/tarte_soleil.tex}\newpage
 
 \vspace{150pt}
 \phantom{text}
@@ -102,10 +101,11 @@
 \input{recipes/split_pea_soup}\newpage
 \input{recipes/rustic_leek_potato_soup}\newpage
 \input{recipes/grilled_cheese_tomato_soup}\newpage
+\input{recipes/taco_soup.tex}\newpage
 
 \input{recipes/soup_salads_books}
 % Manually add list of books to TOC
-\addcontentsline{toc}{subsection}{Recipes From Books}
+\phantomsection\addcontentsline{toc}{subsection}{Recipes From Books}
 \newpage
 
 
@@ -115,15 +115,20 @@
 
 \input{recipes/samosa-shepherds-pie}\newpage
 \input{recipes/southwest_potatoes}\newpage
+\input{recipes/bean_potato_skillet.tex}\newpage
 \input{recipes/garlicky_black_beans}\newpage
 \input{recipes/stewed_lentils_and_tomatoes}\newpage
 \input{recipes/tarka_dal}\newpage
 \input{recipes/coconut_red_lentil_curry}\newpage
 \input{recipes/black_lentil_dal}\newpage
+\input{recipes/dal_makhani.tex}\label{main:dal_makhani}\newpage
 \input{recipes/chana_masala}\newpage
+\input{recipes/chana_masala2.tex}\label{main:chana_masala2}\newpage
 \input{recipes/red_kidney_bean_curry}\newpage
+\input{recipes/rajma_dal.tex}\label{main:rajma_dal}\newpage
 \input{recipes/cauliflower_pea_chickpea_curry}\newpage
 \input{recipes/aloo_gobi}\newpage
+\input{recipes/saag_paneer.tex}\newpage
 \input{recipes/cauliflower_steaks_with_quinoa}\newpage
 \input{recipes/broccoli_quinoa}\newpage
 \input{recipes/broccoli_buddha_bowl}\newpage
@@ -133,6 +138,7 @@
 \input{recipes/quinoa_beet_burgers}\newpage
 \input{recipes/red_curry_peanut_zoodles}\newpage
 \input{recipes/three_bean_chili}\newpage
+\input{recipes/black_bean_kahlua_chili.tex}\newpage
 \input{recipes/vegetarian_moussaka}\newpage
 \input{recipes/penne_alla_vodka}\newpage
 \input{recipes/grandfathers_pasta}\newpage
@@ -140,11 +146,25 @@
 \input{recipes/lasagna}\newpage
 \input{recipes/stuffed_shells}\newpage
 \input{recipes/imperial_macarony_bake}\newpage
+\input{recipes/spinach_quiche.tex}\newpage
+\input{recipes/zucchini_fried_rice.tex}\newpage
 \input{recipes/cheese_fondue}\newpage
 
 \input{recipes/mains_books}
-\addcontentsline{toc}{subsection}{Recipes From Books}
+\phantomsection\addcontentsline{toc}{subsection}{Recipes From Books}
 \newpage
+
+\vspace{150pt}
+\phantom{text}
+\section{Components}
+
+\input{recipes/onion_jam}\newpage
+\input{recipes/basic_almond_cheese}\newpage
+\input{recipes/paneer.tex}\label{components:paneer}\newpage
+\input{recipes/paneer_spice_mix.tex}\label{components:paneer_spice}\newpage
+\input{recipes/taco_seasoning.tex}\label{components:taco_seasoning}\newpage
+\input{recipes/ginger_garlic_paste.tex}\label{components:gingergarlicpaste}\newpage
+\input{recipes/miso_baked_tofu.tex}\newpage
 
 \vspace{150pt}
 \phantom{text}
@@ -162,7 +182,7 @@
 \input{recipes/vegan_sugar_cookies}\newpage
 
 \input{recipes/desserts_books}
-\addcontentsline{toc}{subsection}{Recipes From Books}
+\phantomsection\addcontentsline{toc}{subsection}{Recipes From Books}
 \newpage
 
 \end{document}
