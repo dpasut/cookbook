@@ -64,15 +64,17 @@
 \pagenumbering{roman} % Roman numerals for TOC
 \tableofcontents
 \clearpage
+\addtocontents{toc}{~\textbf{$\star$ indicates low calorie recipes}\par}
 \pagenumbering{arabic} % Switch at arabic numbers
 % Set section title formatting
 \titleformat{\section}[block]{\fontsize{72pt}{72pt}\bfseries\sffamily\center}{}{0em}{}[\thispagestyle{empty}\cleardoublepage]
 \titlespacing{\section}{0pt}{150pt}{40pt}
 \phantom{text}
 
-\section{Brunch}
+\section{Breakfast and Brunch}
 
 \input{recipes/banana_oatmeal_muffins}\newpage
+\input{recipes/kale_quinoa_bites}\newpage
 \input{recipes/crispy_home_fries}\newpage
 \input{recipes/crispy_potato_hash}\newpage
 
@@ -92,16 +94,20 @@
 \input{recipes/tempeh_taco_salad}\newpage
 \input{recipes/roasted_carrot_and_avocado_salad}\newpage
 \input{recipes/carrot_salad_with_tahini}\newpage
+\input{recipes/warm_lentil_and_potato_salad}\newpage
+\input{recipes/smash_and_toss_roasted_potato_salad}\newpage
 \input{recipes/carrot_soup}\newpage
 \input{recipes/garlic_cauliflower_soup}\newpage
 \input{recipes/coconut_red_lentil_soup}\newpage
+\input{recipes/taco_soup.tex}\newpage
 \input{recipes/silky_tofu_soup}\newpage
 \input{recipes/green_lentil_soup}\newpage
+\input{recipes/green_lentil_soup_with_curried_butter}\newpage
+\input{recipes/curried_tomato_tortellini_soup}\newpage
 \input{recipes/black_bean_soup}\newpage
 \input{recipes/split_pea_soup}\newpage
 \input{recipes/rustic_leek_potato_soup}\newpage
 \input{recipes/grilled_cheese_tomato_soup}\newpage
-\input{recipes/taco_soup.tex}\newpage
 
 \input{recipes/soup_salads_books}
 % Manually add list of books to TOC
@@ -118,7 +124,7 @@
 \input{recipes/bean_potato_skillet.tex}\newpage
 \input{recipes/garlicky_black_beans}\newpage
 \input{recipes/stewed_lentils_and_tomatoes}\newpage
-\input{recipes/tarka_dal}\newpage
+% \input{recipes/tarka_dal}\newpage
 \input{recipes/coconut_red_lentil_curry}\newpage
 \input{recipes/black_lentil_dal}\newpage
 \input{recipes/dal_makhani.tex}\label{main:dal_makhani}\newpage
@@ -137,6 +143,7 @@
 \input{recipes/roasted_butternut_squash_sandwich}\newpage
 \input{recipes/quinoa_beet_burgers}\newpage
 \input{recipes/red_curry_peanut_zoodles}\newpage
+\input{recipes/sunshine_pad_thai}\newpage
 \input{recipes/three_bean_chili}\newpage
 \input{recipes/black_bean_kahlua_chili.tex}\newpage
 \input{recipes/vegetarian_moussaka}\newpage
