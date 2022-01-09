@@ -32,7 +32,7 @@
 
 % Limit number of items in TOC
 \newcounter{limitperpage}
-\setcounter{limitperpage}{36}
+% \setcounter{limitperpage}{35}
 \newcounter{tocentries}
 \xapptocmd{\addcontentsline}{\ifstrequal{#1}{toc}{%
     \stepcounter{tocentries}%
@@ -66,9 +66,12 @@
 \clearpage
 \addtocontents{toc}{~\textbf{\texorpdfstring{$\star$}{str} indicates low calorie recipes}\par}
 \pagenumbering{arabic} % Switch at arabic numbers
+
 % Set section title formatting
 \titleformat{\section}[block]{\fontsize{72pt}{72pt}\bfseries\sffamily\center}{}{0em}{}[\thispagestyle{empty}\cleardoublepage]
 \titlespacing{\section}{0pt}{150pt}{40pt}
+
+
 \phantom{text}
 \section{Breads and Baked Goods}
 \input{recipes/no_knead_bread}\label{bread:noknead}\newpage
