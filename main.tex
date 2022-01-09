@@ -64,7 +64,7 @@
 \pagenumbering{roman} % Roman numerals for TOC
 \tableofcontents
 \clearpage
-\addtocontents{toc}{~\textbf{$\star$ indicates low calorie recipes}\par}
+\addtocontents{toc}{~\textbf{\texorpdfstring{$\star$}{str} indicates low calorie recipes}\par}
 \pagenumbering{arabic} % Switch at arabic numbers
 % Set section title formatting
 \titleformat{\section}[block]{\fontsize{72pt}{72pt}\bfseries\sffamily\center}{}{0em}{}[\thispagestyle{empty}\cleardoublepage]
@@ -94,6 +94,7 @@
 \phantom{text}
 \section{Sides and Appetizers}
 
+\input{recipes/cheese_fondue}\newpage
 
 \vspace{150pt}
 \phantom{text}
